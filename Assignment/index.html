@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Webpage</title>
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">My Website</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </nav>
+    <!-- Hamburger Icon for Mobile -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="card">
+      <h3>My Professional Journey</h3>
+      <p>
+        As an experienced professional in sales and business development, I thrive in environments that demand adaptability, strategic thinking, and innovative problem-solving. Currently working as the Head of Sales and Marketing at Jolu Group Security, I focus on improving marketing strategies, client relationships, and driving growth for our security services. 
+        <br><br>
+        My passion for technology and client-centric solutions has driven me to build strong inbound and outbound processes that foster trust and long-term partnerships. I also have a keen interest in leadership development, aiming to step out as a leader for my next big initiative.
+      </p>
+    </div>
+  
+    <div class="card">
+      <h3>My Learning Path</h3>
+      <p>
+        I am constantly seeking to expand my knowledge and skills. I am currently pursuing a certificate in Software Development from PLP Academy. This program is enhancing my technical skills and providing me with a solid foundation in software development principles. I am particularly interested in web development, data analysis, and machine learning.
+        <br><br>
+        My educational background includes a Bachelor of Arts in Economics with IT, providing me with the foundation to combine analytical thinking with technical skills. This, along with my experience in data annotation, makes me eager to contribute to impactful projects.
+      </p>
+    </div>
+  
+    <div class="card">
+      <h3>My Vision & Values</h3>
+      <p>
+        Looking ahead, my goal is to play an influential role in my country's tech community over the next 5-10 years. I want to contribute to the development of innovative solutions that not only drive economic growth but also promote sustainability and social impact.
+        <br><br>
+        My personal values include growth and learning, responsibility, ambition, perseverance, and family. To serve as the cornerstone of everything I do. These principles guide me as I take on challenges and pursue opportunities that align with my aspirations to become a recognized leader in my field.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My Website</p>
+  </footer>
+
+  <script>
+    // Toggle menu for small screens
+    function toggleMenu() {
+      const nav = document.querySelector('nav');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

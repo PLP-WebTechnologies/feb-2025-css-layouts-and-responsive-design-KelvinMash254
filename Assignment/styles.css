@@ -1,0 +1,159 @@
+/* Define CSS variables for easier customization */
+:root {
+    --primary-color: #333;
+    --accent-color: #4CAF50;
+    --light-bg: #f4f4f4;
+    --white: #fff;
+    --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --transition-speed: 0.3s;
+    --font-family: 'Arial', sans-serif;
+  }
+  
+  /* Basic reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    background-color: var(--light-bg);
+    color: #333;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color var(--transition-speed);
+  }
+  
+  nav a:hover {
+    color: var(--accent-color);
+  }
+  
+  /* Hamburger Menu */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--white);
+    transition: transform var(--transition-speed);
+  }
+  
+  /* Main Content (Grid Layout) */
+  .main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .card {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card h3 {
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    color: #555;
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 15px;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .main {
+      grid-template-columns: 1fr;
+    }
+  
+    nav {
+      flex-direction: column;
+      gap: 10px;
+      display: none;
+      width: 100%;
+    }
+  
+    nav a {
+      text-align: center;
+      width: 100%;
+      padding: 10px 0;
+      display: block;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
+    nav.active {
+      display: flex;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo {
+      font-size: 1.5rem;
+    }
+  
+    nav {
+      font-size: 0.9rem;
+    }
+  
+    .card {
+      padding: 15px;
+    }
+  }
+  
